@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style>
+    .nav_menu{
+      list-style-type:none;
+      width:100%;
+      display:flex;
+      align-items:center;
+      background-color:#9cc9c1;
+
+
+    }
+    .nav_menu li{
+      padding:12px 16px;
+      text-align:center;
+      line-height:70px;
+      height:70px;
+
+    }
+    .nav_menu li a{
+      text-decoration:none;
+      color:#03363d;
+      font-size:16px;
+    }
+    ,nav_menu li:first-child{
+      font-size:18px;
+      margin-right:auto;
+      vertical-align:middle;
+
+    }
+    </style>
+
+  </head>
+  <body>
+
+    <ul class='nav_menu'>
+      <li>Django</li>
+      <li><a href="{% url 'index' %}">Home</li>
+      <li><a href="{% url 'admin:index' %}">Admin</li>
+      <li><a href="{% url 'basic_app:other' %}">Other</a></li>
+
+    </ul>
+
+    {% block body_block %}
+    {% endblock %}
+
+  </body>
+</html>
